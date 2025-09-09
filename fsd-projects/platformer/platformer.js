@@ -27,16 +27,21 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    // toggleGrid();
+    toggleGrid();
 
 
     // TODO 2 - Create Platforms
-
-
-
-
+      createPlatform(200, 650, 100, 30);
+      createPlatform(200, 450, 100, 30);
+      createPlatform(450, 550, 100, 30);
+      createPlatform(450, 350, 100, 30);
+      createPlatform(700, 450, 100, 30);
+      createPlatform(1000, 550, 100, 30);
+      createPlatform(1100, 450, 100, 30);
+      createPlatform(1300, 350, 100, 30);
+      createPlatform(1100, 250, 100, 30);
     // TODO 3 - Create Collectables
-
+      createCollectable("boxing glove", 1000, 700);
 
 
     
