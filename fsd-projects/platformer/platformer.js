@@ -43,18 +43,17 @@ $(function () {
 
     createCollectable("boxing", 1000, 700);
     createCollectable("MMA", 1100, 250);
-    createCollectable("Hoodie", 500, 350);
+    createCollectable("hoodie", 500, 350);
    
 
     // TODO 4 - Create Cannons
-    createCannon("top", 200, 1000);
-    createCannon("top", 500, 1000);
-    createCannon("top", 900, 1000);
-    createCannon("top", 1100, 1000);
-    createCannon("right", 200, 1000);
-    createCannon("right", 500, 1000);
-    createCannon("left", 300, 1000);
-    createCannon("left", 600, 1000);
+    createCannon("top", 200, 2000);
+    createCannon("top", 500, 2000);
+    createCannon("top", 900, 2000);
+    createCannon("top", 1100, 2000);
+    createCannon("right", 200, 2000);
+    createCannon("right", 500, 2000);
+    createCannon("left", 100, 2000);
 
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //

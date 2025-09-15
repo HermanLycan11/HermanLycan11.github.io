@@ -98,6 +98,8 @@ var collectableList = {
   //kennedi: { image: "images/collectables/kennedi-head.png" },
   //max: { image: "images/collectables/max-head.png" },
   //steve: { image: "images/collectables/steve-head.png" },
-  boxing: { image: "images/collectables/boxing" },
-  MMA: { image: "images/collectables/MMA"},
+  boxing: { image: "images/collectables/boxing.png" },
+  MMA: { image: "images/collectables/MMA.png" },
+  hoodie: { image: "images/collectables/hoodie.png" },
+  cannon: { image: "images/collectables/cannon.png" },
 };
