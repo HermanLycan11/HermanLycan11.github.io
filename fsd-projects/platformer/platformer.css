@@ -5,6 +5,8 @@ body {
 canvas {
   background-color: lightblue;
   margin: 20px;
+  background-image: url("images/cage.png");
+  background-size: cover;
 }
 
 img {
