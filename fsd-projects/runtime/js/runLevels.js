@@ -18,8 +18,78 @@ var runLevels = function (window) {
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
+function createSawBlade(x, y){
+var hitZoneSize = 25;
+var damageFromObstacle = 10;
+var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+sawBladeHitZone.x = 100;
+sawBladeHitZone.y = 250;
+game.addGameItem(sawBladeHitZone);
+var obstacleImage = draw.bitmap("img/sawblade.png");
+sawBladeHitZone.addChild(obstacleImage);
+obstacleImage.y = - 25;
+obstacleImage.x = - 25;
+}
+createSawBlade(400, 325);
+createSawBlade(700, 200);
+createSawBlade(700, 370);
+function createEnemy(x, y){
+  var enemy = game.createGameItem("enemy", 25);
+  var redSquare = draw.rect(50, 50, "red");
+  redSquare.x = -25;
+  redSquare.y = -25;
+  enemy.addChild(redSquare);
+  enemy.x = x;
+  enemy.y = y;
+  game.addGameItem(enemy);
+  enemy.velocityX = -1;
+  enemy.rotationalVelocity = 50000;
+  enemy.onPlayerCollision = function () {
+    game.changeIntegrity(-10);
+    enemy.onProjecttileCollision = function onProjecttileCollision() {
+      game.increaseScore(100);
+      enemy.fadeOut();
+    };
+  };
+};
+ createEnemy(400, groundY - 10);
+ createEnemyI(800, groundY - 100);
+ createEnemy(1200, groundY - 50);
+ function createReward (x, y){
+  var Reward = game.createGameItem("Reward", 25);
+  var blueSquare = draw.rect(50, 50, "blue");
+  blueSquare.x = -25;
+  blueSquare.y = -25;
+  Reward.addChild(blueSquare);
+  Reward.x = x;
+  Reward.y = y;
+  game.addGameItem(Reward);
+  Reward.velocityX = -1
+  Reward.rotationVelocity = 50000;
+  Reward.onPlayerCollision = function (){
+    game.changeIntegrity(50);
+  }
+}
+  createReward(600, groundY - 70)
 
-    
+
+
+function createMarker(){
+  var Marker = game.createGameItem("Marker", 25);
+   var yellowSquare = draw.rect(50, 50, "yellow");
+   yellowSqaure.x = -25;
+   yellowSquare.y = -25;
+   Reward.addChild(yellowSquare);
+   Marker.x = x;
+   Marker.y = y;
+   game.addGameItem(Marker);
+   Marker.velocityX = -1;
+   Marker.rotationalVelocity = 50000
+}
+createMarker(800, groundY - 70)
+
+
+
 
     function startLevel() {
       // TODO 13 goes below here
